@@ -58,6 +58,7 @@ export default function SignInForm() {
       toast("Đăng nhập thành công", { type: "success" });
       router.push("/dashboard");
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onError: (error: any) => {
       if (error.response?.data?.message) {
         toast(error.response.data.message, { type: "error" });

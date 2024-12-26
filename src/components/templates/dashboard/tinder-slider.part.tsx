@@ -15,6 +15,7 @@ export default function TinderSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState(null);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSwipe = (direction: any) => {
     if (currentIndex < profiles.length) {
       setSwipeDirection(direction);

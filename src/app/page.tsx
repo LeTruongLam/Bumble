@@ -36,7 +36,7 @@ export default function Home() {
               <QRIcon fill="#fff" />
               <div className="mt-6">
                 <p className="text-xl text-secondary-content ">
-                  It’s better on the app.
+                  Its better on the app.
                 </p>
                 <div className="flex flex-col justify-center  items-center gap-3  mt-3">
                   <Button className="bg-white h-12 w-max text-primary-content  text-[18px] rounded-[24px] px-6 py-3 min-w-[150px] hover:bg-slate-100 ">
@@ -58,11 +58,11 @@ export default function Home() {
                 Bring your bar back up to where it belongs
               </h2>
               <p className="text-xl mb-5">
-                You deserve better, so we’ve designed great ways for you to date
+                You deserve better, so weve designed great ways for you to date
                 more and stress less.
               </p>
               <Button className="bg-primary-content text-white h-12 w-max text-[18px] rounded-[24px] px-6 py-3 min-w-[150px] hover:bg-primary-content hover:bg-opacity-95 ">
-                See what's new
+                See whats new
               </Button>
             </div>
             <div className="w-1/2 ">
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="container py-[96px] px-[108px] flex flex-col gap-6 ">
             <div>
               <h2 className="text-responsive uppercase font-bumble-bold mb-6">
-                We’re not just for dating
+                Were not just for dating
               </h2>
             </div>
             <div className="grid grid-cols-3 gap-6 ">
@@ -125,8 +125,7 @@ export default function Home() {
                   </a>
                   <p className="text-lg mt-3">
                     Meet someone like you. Or unlike you. Make new friends and
-                    find new things to do together — whether you’re home or
-                    away.
+                    find new things to do together — whether youre home or away.
                   </p>
                 </div>
               </div>
@@ -172,9 +171,9 @@ export default function Home() {
                 Make the first move™
               </h2>
               <p className="text-xl mb-5">
-                We’re the only app that makes dating better by putting women’s
+                Were the only app that makes dating better by putting womens
                 experiences first. Because when things are better for women,
-                they’re better for everyone.
+                theyre better for everyone.
               </p>
               <Button className="bg-primary-content text-white h-12 w-max text-[18px] rounded-[24px] px-6 py-3 min-w-[150px] hover:bg-primary-content hover:bg-opacity-95 ">
                 About Bumble

@@ -6,6 +6,7 @@ export type IUserInfoState = {
 
 export interface IAuthState {
   token: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   expiresAt: any;
   account: IUserInfoState;
 }

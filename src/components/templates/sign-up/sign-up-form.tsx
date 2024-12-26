@@ -41,6 +41,7 @@ export default function SignUpForm() {
       toast("Đăng ký thành công", { type: "success" });
       reset();
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onError: (error: any) => {
       if (error.response?.data?.message) {
         toast(error.response.data.message, { type: "error" });
