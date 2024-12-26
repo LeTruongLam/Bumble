@@ -1,101 +1,271 @@
+"use client";
+import Header from "@/components/layouts/header";
 import Image from "next/image";
+import QRIcon from "@/components/atoms/QRIcon";
+import { Button } from "@/components/ui/button";
+
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Footer from "@/components/layouts/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <Header />
+      <main>
+        <section className="relative w-full ">
+          <Image
+            src="/bg_section-1.avif"
+            width={1920}
+            height={1080}
+            alt="Mô tả hình ảnh"
+            className="w-full h-full relative max-h-[calc(100vh-4.5rem)] object-cover object-[77%_10%] "
+          />
+          <div className="absolute  top-0 left-0 w-full h-full bg-black bg-opacity-30">
+            <div className=" h-full px-24 py-[108px] flex flex-col justify-center items-center text-center">
+              <h1 className="text-responsive   uppercase font-bumble-bold text-secondary-content mb-6">
+                Make the next move
+              </h1>
+              <QRIcon fill="#fff" />
+              <div className="mt-6">
+                <p className="text-xl text-secondary-content ">
+                  It’s better on the app.
+                </p>
+                <div className="flex flex-col justify-center  items-center gap-3  mt-3">
+                  <Button className="bg-white h-12 w-max text-primary-content  text-[18px] rounded-[24px] px-6 py-3 min-w-[150px] hover:bg-slate-100 ">
+                    Download now
+                  </Button>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+                  <Button className="bg-white h-12 w-max text-primary-content text-[18px]  rounded-[24px] px-6 py-3 min-w-[150px] hover:bg-slate-100  ">
+                    <Link href="/sign-in">Sign In</Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-muted-content">
+          <div className="container py-[96px] px-[108px] flex items-center justify-start gap-4">
+            <div className="w-1/2 pr-[5%] leading-[0.85] text-primary-content">
+              <h2 className="text-responsive uppercase font-bumble-bold mb-6">
+                Bring your bar back up to where it belongs
+              </h2>
+              <p className="text-xl mb-5">
+                You deserve better, so we’ve designed great ways for you to date
+                more and stress less.
+              </p>
+              <Button className="bg-primary-content text-white h-12 w-max text-[18px] rounded-[24px] px-6 py-3 min-w-[150px] hover:bg-primary-content hover:bg-opacity-95 ">
+                See what's new
+              </Button>
+            </div>
+            <div className="w-1/2 ">
+              <Image
+                className="h-full rounded-3xl aspect-[600/620] object-cover object-[65%_10%]"
+                src="/bg_section-2.avif"
+                width={600}
+                height={620}
+                alt="Mô tả hình ảnh"
+              />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container py-[96px] px-[108px] flex flex-col gap-6 ">
+            <div>
+              <h2 className="text-responsive uppercase font-bumble-bold mb-6">
+                We’re not just for dating
+              </h2>
+            </div>
+            <div className="grid grid-cols-3 gap-6 ">
+              <div>
+                <Image
+                  src={"/blog-item-1.avif"}
+                  width={379}
+                  height={252}
+                  alt="Mô tả hình ảnh"
+                  className="rounded-[24px] object-cover aspect-[3/2]"
+                  priority
+                />
+                <div className="pt-8">
+                  <a
+                    href="#"
+                    className="text-[36px] hover:underline leading-[1.1]"
+                  >
+                    Meet someone with Bumble Date
+                  </a>
+                  <p className="text-lg mt-3">
+                    Find someone you actually want to date, then go ahead and
+                    Make the First Move. Make genuine connections, vibe over
+                    what you both love, and most importantly, have fun.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <Image
+                  src={"/blog-item-2.avif"}
+                  width={379}
+                  height={252}
+                  alt="Mô tả hình ảnh"
+                  className="rounded-[24px] object-cover aspect-[3/2]"
+                  priority
+                />
+                <div className="pt-8">
+                  <a
+                    href="#"
+                    className="text-[36px] hover:underline leading-[1.1]"
+                  >
+                    Find new friends on Bumble For Friends
+                  </a>
+                  <p className="text-lg mt-3">
+                    Meet someone like you. Or unlike you. Make new friends and
+                    find new things to do together — whether you’re home or
+                    away.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <Image
+                  src={"/blog-item-3.avif"}
+                  width={379}
+                  height={252}
+                  alt="Mô tả hình ảnh"
+                  className="rounded-[24px] object-cover aspect-[3/2]"
+                  priority
+                />
+                <div className="pt-8">
+                  <a
+                    href="#"
+                    className="text-[36px] hover:underline leading-[1.1]"
+                  >
+                    Make career moves with Bumble Bizz
+                  </a>
+                  <p className="text-lg mt-3">
+                    Find friends with work benefits. Connect with other business
+                    professionals to find your next job, a mentor or even a
+                    whole new career.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-secondary-content">
+          <div className="container py-[96px] px-[108px] flex items-center justify-start gap-4">
+            <div className="w-1/2 ">
+              <Image
+                className="h-full rounded-3xl aspect-[600/620] object-cover object-[65%_10%]"
+                src="/bg_section-3.avif"
+                width={600}
+                height={620}
+                alt="Mô tả hình ảnh"
+              />
+            </div>
+            <div className="w-1/2 pl-[5%] leading-[0.85] text-primary-content">
+              <h2 className="text-responsive uppercase font-bumble-bold mb-6">
+                Make the first move™
+              </h2>
+              <p className="text-xl mb-5">
+                We’re the only app that makes dating better by putting women’s
+                experiences first. Because when things are better for women,
+                they’re better for everyone.
+              </p>
+              <Button className="bg-primary-content text-white h-12 w-max text-[18px] rounded-[24px] px-6 py-3 min-w-[150px] hover:bg-primary-content hover:bg-opacity-95 ">
+                About Bumble
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section className="bg-muted-content">
+          <div className="container py-[96px] px-[108px] flex flex-col gap-6 ">
+            <div>
+              <h2 className="text-responsive uppercase font-bumble-bold mb-6 leading-[0.85]">
+                If it worked for them, <br /> it could work for you
+              </h2>
+            </div>
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <Card className="w-full  flex bg-white rounded-[24px] border-none items-center ">
+                    <div className="w-1/2 rounded-l-[24px] overflow-hidden">
+                      <Image
+                        src={"/landing-carousel-1.avif"}
+                        height={404}
+                        width={606}
+                        alt="Mô tả hình ảnh"
+                        className=""
+                      />
+                    </div>
+                    <div className="p-8">
+                      <h3 className="text-4xl break-words leading-[1.1] hover:underline">
+                        Hannah Met Her Now-Husband on Bumble.
+                      </h3>
+                      <p className="break-words text-lg leading-[1.3] mt-3">
+                        A Few Months Later, She Met One of Her Bridesmaids
+                        There, Too
+                      </p>
+                    </div>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card className="w-full  flex bg-white rounded-[24px] border-none items-center ">
+                    <div className="w-1/2 rounded-l-[24px] overflow-hidden">
+                      <Image
+                        src={"/landing-carousel-2.avif"}
+                        height={404}
+                        width={606}
+                        alt="Mô tả hình ảnh"
+                        className=""
+                      />
+                    </div>
+                    <div className="p-8">
+                      <h3 className="text-4xl break-words leading-[1.1] hover:underline">
+                        Brian and Kaci
+                      </h3>
+                      <p className="break-words text-lg leading-[1.3] mt-3">
+                        Brian and Kaci Were Stationed Overseas Together—But They
+                        Met on Bumble
+                      </p>
+                    </div>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card className="w-full  flex bg-white rounded-[24px] border-none items-center ">
+                    <div className="w-1/2 rounded-l-[24px] overflow-hidden">
+                      <Image
+                        src={"/landing-carousel-3.avif"}
+                        height={404}
+                        width={606}
+                        alt="Mô tả hình ảnh"
+                        className=""
+                      />
+                    </div>
+                    <div className="p-8">
+                      <h3 className="text-4xl break-words leading-[1.1] hover:underline">
+                        Hannah Met Her Now-Husband on Bumble.
+                      </h3>
+                      <p className="break-words text-lg leading-[1.3] mt-3">
+                        A Few Months Later, She Met One of Her Bridesmaids
+                        There, Too
+                      </p>
+                    </div>
+                  </Card>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <Footer />
     </div>
   );
 }
