@@ -95,7 +95,7 @@ export default function Home() {
                 />
                 <div className="pt-8">
                   <a
-                    href="#"
+                    href="/"
                     className="text-[36px] hover:underline leading-[1.1]"
                   >
                     Meet someone with Bumble Date
@@ -247,11 +247,10 @@ export default function Home() {
                     </div>
                     <div className="p-8">
                       <h3 className="text-4xl break-words leading-[1.1] hover:underline">
-                        Hannah Met Her Now-Husband on Bumble.
+                      Carène and You-Liang
                       </h3>
                       <p className="break-words text-lg leading-[1.3] mt-3">
-                        A Few Months Later, She Met One of Her Bridesmaids
-                        There, Too
+                      Before building their tiny house together Carène and You-Liang met on Bumble, where You-Liang was drawn in by Carènes travel pics.
                       </p>
                     </div>
                   </Card>
