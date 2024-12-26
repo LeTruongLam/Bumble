@@ -26,12 +26,12 @@ const bumbleSansBold = localFont({
 export const metadata: Metadata = {
   title: "Bumble | Date, Chat, Meet New People & Network Better",
   description: "Bumble | Date, Chat, Meet New People & Network Better",
-  metadataBase: new URL("https://bumble.com/"),
+  metadataBase: new URL("https://bumble-dating-app.vercel.app/"),
   other: [
     {
       name: "Content-Security-Policy",
       content:
-        "default-src 'self'; script-src 'self' https://trusted-scripts.com; style-src 'self' 'unsafe-inline' https://trusted-styles.com; img-src 'self' data: https://bumble.com/;",
+        "default-src 'self'; script-src 'self' https://trusted-scripts.com; style-src 'self' 'unsafe-inline' https://trusted-styles.com; img-src 'self' data: https://bumble-dating-app.vercel.app/;",
     },
   ],
 };
