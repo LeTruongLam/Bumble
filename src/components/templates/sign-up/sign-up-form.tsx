@@ -33,7 +33,7 @@ const formSchema = z
   });
 
 export default function SignUpForm() {
-  const { mutate, isLoading } = useMutation({
+  const { mutate } = useMutation({
     mutationFn: async (data: RegisterType) => {
       return register(data);
     },
@@ -137,9 +137,7 @@ export default function SignUpForm() {
           </p>
         )}
       </div>
-      <Button disabled={isLoading} type="submit">
-        Sign Up
-      </Button>
+      <Button type="submit">Sign Up</Button>
     </form>
   );
 }

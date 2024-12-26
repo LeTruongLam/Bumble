@@ -25,7 +25,7 @@ const formSchema = z.object({
 export default function SignInForm() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { mutate, isLoading } = useMutation({
+  const { mutate } = useMutation({
     mutationFn: async (data: LoginType) => {
       const result = await login(data);
       await fetch("api/auth", {
@@ -119,9 +119,7 @@ export default function SignInForm() {
           </p>
         )}
       </div>
-      <Button disabled={isLoading} type="submit">
-        Sign In
-      </Button>
+      <Button type="submit">Sign In</Button>
     </form>
   );
 }
