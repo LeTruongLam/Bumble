@@ -1,5 +1,6 @@
 import * as React from "react";
-const QRIcon = (props: React.SVGProps<SVGSVGElement>) => (
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const QRIcon = (props: any) => (
   <svg
     aria-hidden="true"
     viewBox="0 0 145 145"

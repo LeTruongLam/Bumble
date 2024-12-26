@@ -1,5 +1,6 @@
 import * as React from "react";
-const LogoMain = (props: React.SVGProps<SVGSVGElement>) => (
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const LogoMain = (props: any) => (
   <svg
     data-origin="pipeline"
     aria-hidden="true"
