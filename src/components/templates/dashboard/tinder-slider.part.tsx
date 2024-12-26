@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 
 export default function TinderSlider() {
-  const [profiles, setProfiles] = useState(tinderProfiles);
+  const [profiles] = useState(tinderProfiles);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState(null);
 
@@ -24,6 +24,7 @@ export default function TinderSlider() {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSwipe = (swiper: any) => {
     if (swiper.swipeDirection === "next") {
       handleSwipe("like");

@@ -1,5 +1,5 @@
 import * as React from "react";
-const LogoMain = (props: any) => (
+const LogoMain = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     data-origin="pipeline"
     aria-hidden="true"

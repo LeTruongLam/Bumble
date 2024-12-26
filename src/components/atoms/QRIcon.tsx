@@ -1,5 +1,5 @@
 import * as React from "react";
-const QRIcon = (props: any) => (
+const QRIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     aria-hidden="true"
     viewBox="0 0 145 145"

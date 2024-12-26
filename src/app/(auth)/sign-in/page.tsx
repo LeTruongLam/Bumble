@@ -10,7 +10,7 @@ export default function SignInPage() {
       </h1>
       <SignInForm />
       <p className="text-sm text-gray-500 mt-4">
-        Don't have an account?
+        Dont have an account?
         <Link className="hover:underline text-blue-500" href="/sign-up">
           Sign up for free
         </Link>
